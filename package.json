@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "js-big-decimal": "^1.2.2",
     "mongodb": "^3.2.3"
   }
 }

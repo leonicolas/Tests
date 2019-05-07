@@ -1,6 +1,52 @@
-const MongoClient = require('mongodb').MongoClient;
 
-MongoClient.connect("mongodb://admin:admin@localhost:27017/admin", { useNewUrlParser: true })
+
+const bigDecimal  = require('js-big-decimal');
+
+testBigdecimal();
+
+function testBigdecimal() {
+    console.log(0.1 + 0.2);
+    console.log(bigDecimal.add(0.1, 0.2));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function testMongo() {
+    const MongoClient = require('mongodb').MongoClient;
+    MongoClient.connect("mongodb://admin:admin@localhost:27017/admin", { useNewUrlParser: true })
     .then(async client => {
         const db = client.db('admin');
         const nicolas = db.collection('nicolas');
@@ -30,3 +76,4 @@ MongoClient.connect("mongodb://admin:admin@localhost:27017/admin", { useNewUrlPa
     async function insert(collection, session, data) {
         const nextId = data[0].id + 1;
     }
+}
